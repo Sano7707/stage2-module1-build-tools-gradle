@@ -1,4 +1,22 @@
 //add everything here
+plugins {
+//  The Java plugin adds Java compilation along with testing and bundling capabilities to a project.
+    id 'java'
+}
+
+group = 'com.mjcschool'
+version = '1.0'
+
+repositories {
+//  Gradle allows you to retrieve declared dependencies from any Maven-compatible or Ivy-compatible repository.
+    mavenCentral()
+}
+
+// In this section, we can declare dependencies that are necessary for a particular subject.
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.11'
+}
+
 
 test {
     useJUnitPlatform()

@@ -1,33 +1,35 @@
 plugins {
-    // id for library
-    // id for maven to publish jar to local repository
+    id 'java-library'
+    id 'maven-publish'
 }
 
 java {
-// provide sourceCompatibility
+    sourceCompatibility = "1.6"
 }
 
 repositories {
-// provide repository, where required dependencies are located
+ mavenCentral()
 }
 
 publishing {
     publications {
         maven(MavenPublication) {
-// provide groupId
-// provide artifactId
-// provide version
-
+            groupId = 'org.company'
+            version = "0.9-SNAPSHOT"
+            artifactId = 'sample'
             from components.java
         }
     }
 }
 
-//add Apache Apache Commons Lang 3.10 (or higher) dependency
+dependencies{
+    compile 'org.apache.poi:poi:3.10'
+}
 
 jar {
     manifest {
-        //provide manifest with such attributes as 'Implementation-Title', 'Implementation-Version'
+        attributes("Implementation-Title": project.name,
+                "Implementation-Version": version)
     }
 }
 
