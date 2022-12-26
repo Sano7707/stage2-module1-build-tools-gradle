@@ -11,7 +11,7 @@ public class Utils {
                 return false;
             }
             else if(s.contains(".")){
-               if(Double.parseDouble(s) <= 0)){
+                if(Double.parseDouble(s) <= 0){
                     return false;
                 }
             }
