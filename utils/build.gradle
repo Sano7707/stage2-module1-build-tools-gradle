@@ -23,8 +23,7 @@ publishing {
 }
 
 dependencies{
-    // https://mvnrepository.com/artifact/org.apache.poi/poi
-     implementation 'org.apache.poi:poi:3.10'
+     implementation("org.apache.commons:commons-lang3:3.12.0")
 
 }
 
