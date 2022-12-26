@@ -7,8 +7,13 @@ public class Utils {
         for (String s:args) {
             if(s == null)
                 return false;
-            else if(s.contains(".") && Double.parseDouble(s) <= 0){
+            else if(s.equals("null")){
                 return false;
+            }
+            else if(s.contains(".")){
+               if(Double.parseDouble(s) <= 0)){
+                    return false;
+                }
             }
             else if(s.equals("") || s.equals(" "))
                 return false;
