@@ -5,7 +5,15 @@ import java.util.List;
 public class Utils {
     public static boolean isAllPositiveNumbers(List<String> args) {
         for (String s:args) {
-            if(Integer.parseInt(s) < 0)
+            if(s = null)
+                return false;
+            else if(s.contains(".") && Double.parseDouble(s) <= 0){
+                return false;
+            }
+            else if(s.equals("") || s.equals(" "))
+                return false;
+
+            else if(Integer.parseInt(s) <= 0)
                 return false;
         }
         return true;

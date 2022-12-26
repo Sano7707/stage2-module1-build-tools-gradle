@@ -1,7 +1,7 @@
 //add everything here
 plugins {
 //  The Java plugin adds Java compilation along with testing and bundling capabilities to a project.
-    id 'java'
+    id 'java-library'
 }
 
 group = 'com.mjcschool'
